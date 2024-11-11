@@ -7,7 +7,7 @@ public class Movie implements Comparable<Movie>{
     private LocalDate releaseDate;
     private int recommendation;
 
-    public Movie(String title, String genre, double rating, LocalDate releaseDate, int recommendation){
+    public Movie(String title, String genre, double rating, LocalDate releaseDate, int recommendation){ //values for movies
         this.title = title;
         this.genre = genre;
         this.rating = rating;
@@ -15,7 +15,7 @@ public class Movie implements Comparable<Movie>{
         this.recommendation = recommendation;
     }
 
-    public void setTitle(String title){
+    public void setTitle(String title){ 
         this.title = title;
     }
 
@@ -56,7 +56,7 @@ public class Movie implements Comparable<Movie>{
     }
 
     @Override
-    public int compareTo(Movie other){
+    public int compareTo(Movie other){ //overrides and allows movies to be compared based on recommendation
         if (this.getRecommendation() < other.getRecommendation()) {
             return -1;
         } else if (this.getRecommendation() > other.getRecommendation()) {
